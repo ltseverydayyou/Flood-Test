@@ -1,0 +1,216 @@
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+
+OrionLib:MakeNotification({
+	Name = "Welcome",
+	Content = "Loading hub (may take some time)",
+	Image = "rbxassetid://10993876141",
+	Time = 3
+})
+
+wait(3)
+OrionLib:MakeNotification({
+	Name = "Hey",
+	Content = "Why don't you get a drink while waiting?",
+	Image = "rbxassetid://11487686045",
+	Time = 5
+})
+
+wait(5)
+local Window = OrionLib:MakeWindow({Name = "Flood Test Fucker", HidePremium = false, IntroText = "Welcome", Icon = "rbxassetid://11985724752", SaveConfig = false, ConfigFolder = "fukcing folld tsest"})
+
+local Tab = Window:MakeTab({
+	Name = "Main",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local Tab1 = Window:MakeTab({
+	Name = "Games",
+	Icon = "rbxassetid://8733216068",
+	PremiumOnly = false
+})
+
+local Tab2 = Window:MakeTab({
+	Name = "Air",
+	Icon = "rbxassetid://11915686706",
+	PremiumOnly = false
+})
+
+local Tab3 = Window:MakeTab({
+	Name = "Destroy Lib",
+	Icon = "rbxassetid://8463436236",
+	PremiumOnly = false
+})
+
+Tab:AddButton({
+	Name = "Liquid Breakout (Inf stuff)",
+	Callback = function()
+        local args = {
+    [1] = "ChangeData", -- ignore
+    [2] = "Credits", -- XP, Gems, Credits
+    [3] = 9999999999999999, --  any number
+    [4] = "Plus" -- ignore this
+}
+
+game:GetService("ReplicatedStorage").DataShopCommunicator:InvokeServer(unpack(args))
+
+local args = {
+    [1] = "ChangeData", -- ignore
+    [2] = "XP", -- XP, Gems, Credits
+    [3] = 9999999999999999, --  any number
+    [4] = "Plus" -- ignore this
+}
+
+game:GetService("ReplicatedStorage").DataShopCommunicator:InvokeServer(unpack(args))
+
+local args = {
+    [1] = "ChangeData", -- ignore
+    [2] = "Gems", -- XP, Gems, Credits
+    [3] = 9999999999999999, --  any number
+    [4] = "Plus" -- ignore this
+}
+
+game:GetService("ReplicatedStorage").DataShopCommunicator:InvokeServer(unpack(args))
+  	end    
+})
+
+Tab:AddLabel("More coming soon")
+
+Tab1:AddLabel("Supported games (or anything u find)")
+
+Tab1:AddButton({
+	Name = "Flood Escape Futuristic",
+	Callback = function()
+        game:GetService'TeleportService':Teleport(8595880725, Client)
+  	end    
+})
+
+Tab1:AddButton({
+	Name = "Liquid Breakout",
+	Callback = function()
+        game:GetService'TeleportService':Teleport(741905805, Client)
+  	end    
+})
+
+Tab1:AddButton({
+	Name = "Flood Escape But Something Ain't Right",
+	Callback = function()
+        game:GetService'TeleportService':Teleport(5797946894, Client)
+  	end    
+})
+
+Tab1:AddButton({
+	Name = "Flood Escape 2 Ultimate",
+	Callback = function()
+        game:GetService'TeleportService':Teleport(6067244110, Client)
+  	end    
+})
+
+Tab1:AddButton({
+	Name = "Flood escape X",
+	Callback = function()
+        game:GetService'TeleportService':Teleport(3729795716, Client)
+  	end    
+})
+
+Tab2:AddTextbox({
+	Name = "Air",
+	Default = "100",
+	TextDisappear = true,
+	Callback = function(Value)
+		game:GetService("Players").LocalPlayer.Character.Water.Air.Value = Value
+	end	  
+})
+
+local Section = Tab2:AddSection({
+	Name = "Max is 100 (on some games)"
+})
+
+Tab2:AddTextbox({
+	Name = "AirTank",
+	Default = "300",
+	TextDisappear = true,
+	Callback = function(Value)
+		game:GetService("Players").LocalPlayer.Character.Water.AirTank.Value = Value
+	end	  
+})
+
+local Section = Tab2:AddSection({
+	Name = "Can be whatever you want"
+})
+
+Tab2:AddToggle({
+	Name = "Toggle Air",
+	Default = false,
+	Callback = function(Value)
+		game:GetService("Players").LocalPlayer.Character.Water.IsBreathEnabled.Value = Value
+	end    
+})
+
+local Section = Tab2:AddSection({
+	Name = "Resets In Game"
+})
+
+Tab2:AddSlider({
+	Name = "SplashAirPenalty",
+	Min = 0,
+	Max = 400,
+	Default = 0,
+	Color = Color3.fromRGB(255,0,0),
+	Increment = 1,
+	ValueName = "Red Bar Thing",
+	Callback = function(rem)
+		_G.airThing = Value
+        game:GetService("Players").LocalPlayer.Character.Water.SplashAirPenalty.Value = rem
+	end    
+})
+
+local Section = Tab2:AddSection({
+	Name = "Useless tbh"
+})
+
+Tab3:AddButton({
+	Name = "Fuck the gui",
+	Callback = function()
+        OrionLib:Destroy()
+  	end    
+})
+
+
+OrionLib:MakeNotification({
+	Name = "Notice",
+	Content = "Script Created by Cringe#0438",
+	Image = "rbxassetid://10827320654",
+	Time = 10
+})
+wait(0.1)
+OrionLib:MakeNotification({
+	Name = "Notice",
+	Content = "If you find bugs report them and they will be fixed",
+	Image = "rbxassetid://10827320654",
+	Time = 10
+})
+wait(0.1)
+OrionLib:MakeNotification({
+	Name = "Warning",
+	Content = "Don't claim that you made the script yourself bozo",
+	Image = "rbxassetid://6525485104",
+	Time = 10
+})
+
+
+game.StarterGui:SetCore("ChatMakeSystemMessage", {
+               Text = "Loaded in 7 seconds";
+               Color = Color3.fromRGB(155,0,255);
+               TextSize = 20
+           })
+
+wait(1)
+game.StarterGui:SetCore("ChatMakeSystemMessage", {
+               Text = "Thank you for using the script";
+               Color = Color3.fromRGB(155,0,255);
+               TextSize = 20
+           })
+
+
+OrionLib:Init()
