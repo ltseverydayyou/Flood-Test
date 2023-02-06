@@ -7,15 +7,12 @@ OrionLib:MakeNotification({
 	Time = 3
 })
 
-wait(3)
-OrionLib:MakeNotification({
-	Name = "Hey",
-	Content = "Why don't you get a drink while waiting?",
-	Image = "rbxassetid://11487686045",
-	Time = 5
-})
+wait(4)
+game.ReplicatedStorage.ClientStorage.SpawnNotification:Invoke("Grab a drink or something while waiting", Color3.new(155,0,255))
+wait(0.001)
+game.ReplicatedStorage.ClientStorage.SpawnNotification:Invoke("or not", Color3.new(155,0,255))
 
-wait(5)
+wait(4)
 local Window = OrionLib:MakeWindow({Name = "Flood Test Fucker", HidePremium = false, IntroText = "Welcome", Icon = "rbxassetid://11985724752", SaveConfig = false, ConfigFolder = "fukcing folld tsest"})
 
 local Tab = Window:MakeTab({
@@ -74,19 +71,37 @@ game:GetService("ReplicatedStorage").DataShopCommunicator:InvokeServer(unpack(ar
   	end    
 })
 
+Tab:AddButton({
+	Name = "Rejoin",
+	Callback = function()
+		local TeleportService = game:GetService("TeleportService")
+		local Player = game:GetService("Players").LocalPlayer
+		TeleportService:Teleport(game.PlaceId, Player)
+  	end    
+})
+
+Tab:AddTextbox({
+	Name = "Notification",
+	Default = "Test",
+	TextDisappear = false,
+	Callback = function(Value)
+		game.ReplicatedStorage.ClientStorage.SpawnNotification:Invoke(Value, Color3.new(255,255,255))
+	end	  
+})
+
 Tab:AddLabel("More coming soon")
 
-Tab1:AddLabel("Supported games (or anything u find)")
+Tab1:AddLabel("Supported games [or anything you find]")
 
 Tab1:AddButton({
-	Name = "Flood Escape Futuristic",
+	Name = "Flood Escape Future NEW GUI!}",
 	Callback = function()
         game:GetService'TeleportService':Teleport(8595880725, Client)
   	end    
 })
 
 Tab1:AddButton({
-	Name = "Liquid Breakout",
+	Name = "Liquid Breakout [NEW YEARS!]",
 	Callback = function()
         game:GetService'TeleportService':Teleport(741905805, Client)
   	end    
@@ -100,16 +115,9 @@ Tab1:AddButton({
 })
 
 Tab1:AddButton({
-	Name = "Flood Escape 2 Ultimate",
+	Name = "[+5 Maps] Flood Escape Ultimate",
 	Callback = function()
         game:GetService'TeleportService':Teleport(6067244110, Client)
-  	end    
-})
-
-Tab1:AddButton({
-	Name = "Flood escape X",
-	Callback = function()
-        game:GetService'TeleportService':Teleport(3729795716, Client)
   	end    
 })
 
@@ -176,6 +184,11 @@ Tab3:AddButton({
   	end    
 })
 
+game.ReplicatedStorage.ClientStorage.SpawnNotification:Invoke("Script doesn't have alot of functions", Color3.new(155,0,255))
+wait(0.0000000001)
+game.ReplicatedStorage.ClientStorage.SpawnNotification:Invoke("Notice: Teleport Function May Not Work On Some Games As They Have Third Party Teleports Disabled", Color3.new(155,0,255))
+wait(0.0000000001)
+game.ReplicatedStorage.ClientStorage.SpawnNotification:Invoke("Enjoy using the script or whatever lol", Color3.new(155,0,255))
 
 OrionLib:MakeNotification({
 	Name = "Notice",
@@ -200,17 +213,42 @@ OrionLib:MakeNotification({
 
 
 game.StarterGui:SetCore("ChatMakeSystemMessage", {
-               Text = "Loaded in 7 seconds";
+               Text = "Loaded!";
                Color = Color3.fromRGB(155,0,255);
                TextSize = 20
            })
 
-wait(1)
+wait(0,00000000000001)
 game.StarterGui:SetCore("ChatMakeSystemMessage", {
-               Text = "Thank you for using the script";
+               Text = "Thanks for using!";
                Color = Color3.fromRGB(155,0,255);
                TextSize = 20
            })
 
 
 OrionLib:Init()
+
+
+
+wait(10)
+game.ReplicatedStorage.ClientStorage.SpawnNotification:Invoke("Riejcjdjejd sucks smh", Color3.new(0,255,255))
+wait(10)
+game.ReplicatedStorage.ClientStorage.SpawnNotification:Invoke("a m o g u s", Color3.new(255,0,0))
+wait(10)
+game.ReplicatedStorage.ClientStorage.SpawnNotification:Invoke("Did you know?: Flood Escape Future is stealing from Water Evasion X?", Color3.new(255,0,0))
+wait(2)
+game.ReplicatedStorage.ClientStorage.SpawnNotification:Invoke("lucoyo11 is the reason for that", Color3.new(255,0,0))
+wait(10)
+game.ReplicatedStorage.ClientStorage.SpawnNotification:Invoke("Fun Fact: this script was made in 30 mins", Color3.new(155,0,255))
+wait(10)
+game.ReplicatedStorage.ClientStorage.SpawnNotification:Invoke("Did you know that Liquid Breakout haves the most shitty owner", Color3.new(255,0,0))
+wait(10)
+game.ReplicatedStorage.ClientStorage.SpawnNotification:Invoke("Did you know?: Riejcjdjejd is using his friends to do her shit work", Color3.new(0,255,255))
+wait(2)
+game.ReplicatedStorage.ClientStorage.SpawnNotification:Invoke("smh", Color3.new(255,0,0))
+wait(10)
+game.ReplicatedStorage.ClientStorage.SpawnNotification:Invoke("ok this is my last message i will head out now", Color3.new(0,255,255))
+wait(2)
+game.ReplicatedStorage.ClientStorage.SpawnNotification:Invoke("or am i? :troll:", Color3.new(0,255,255))
+wait(20)
+game.ReplicatedStorage.ClientStorage.SpawnNotification:Invoke("mixalispantidos12 is sus", Color3.new(255,0,0))
